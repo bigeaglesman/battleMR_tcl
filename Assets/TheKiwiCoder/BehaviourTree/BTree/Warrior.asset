@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8231961808753871610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b8b6469b91066094bbb2709ee8284f14
+  position: {x: 74.857056, y: -169.7143}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  child: {fileID: 8011001814217528274}
+--- !u!114 &-6225232359540162010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a8bf5e39ee4b5284d9057eb261c07002
+  position: {x: 74.85718, y: 121.714264}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 8051233784641635476}
+  - {fileID: 6951509173370902687}
+--- !u!114 &-975259230017495646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b04d5e66dc09c34a986ddaf37f20d9e, type: 3}
+  m_Name: FindTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 945c20a92094d124180e223eec00a8cc
+  position: {x: -161.64249, y: 484}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  detectionRadius: 1000
+  findEnemy: 1
+  findAlly: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -8231961808753871610}
+  treeState: 0
+  nodes:
+  - {fileID: -8231961808753871610}
+  - {fileID: 8011001814217528274}
+  - {fileID: 8051233784641635476}
+  - {fileID: -975259230017495646}
+  - {fileID: 2731679533506481431}
+  - {fileID: 8752099246563994754}
+  - {fileID: -6225232359540162010}
+  - {fileID: 6951509173370902687}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 0.1
+--- !u!114 &2731679533506481431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba9b8554986d1945ad443e800afacc7, type: 3}
+  m_Name: MoveToTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 277dfcf8fa6732945ba2ad41f390dcd1
+  position: {x: 73.67751, y: 483.00006}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+--- !u!114 &6951509173370902687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cfb7f40af36439740bab7eea9c87b587
+  position: {x: 524.5714, y: 472.57144}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  duration: 1
+--- !u!114 &8011001814217528274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e218c5982ccecdc4ca0f366cac495654
+  position: {x: 74.677505, y: -51.02681}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6225232359540162010}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &8051233784641635476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 94b50c0ccfaa3f64c893e546084c08e2
+  position: {x: 74.85718, y: 280.57147}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -975259230017495646}
+  - {fileID: 2731679533506481431}
+  - {fileID: 8752099246563994754}
+--- !u!114 &8752099246563994754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84670861fc47e0f49b1bb4927e287e97, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7359261bc93004f47943c6a0bc1d9933
+  position: {x: 265.7152, y: 516.6667}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    enemyTarget: {fileID: 0}
+    allyTarget: {fileID: 0}
+    attackRange: 2
+  description: 
+  drawGizmos: 0
+  attackCooldown: 0.5
+  attackDamage: 5
